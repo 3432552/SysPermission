@@ -1,5 +1,7 @@
 package com.wzh.controller;
 
+import com.wzh.common.ResultMsg;
+import com.wzh.exception.PermissionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -19,7 +21,15 @@ public class TestController {
     @RequestMapping("/index")
     @ResponseBody
     public String name() {
+
         return "Hello World!----------";
+    }
+
+    @RequestMapping("/hello.json")
+    @ResponseBody
+    public ResultMsg name2() {
+        log.info("你没有此权限!");
+        throw new PermissionException("发生了权限异常!");
     }
 
     @RequestMapping("/content")
