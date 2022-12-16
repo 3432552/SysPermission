@@ -18,7 +18,7 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <!--统一管理 spring相关版本-->
-        <springframework.version>5.2.4.RELEASE</springframework.version>
+        <springframework.version>5.2.20.RELEASE</springframework.version>
     </properties>
 
     <dependencies>
